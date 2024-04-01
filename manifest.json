@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "author": "@jRausell",
+  "homepage_url": "https://github.com/jrausell/chrome-extension--X-Twitter---hide-muted",
+  "name": "X - hide muted",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
