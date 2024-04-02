@@ -4,8 +4,10 @@ const mutedElementClass =
 const wrapperPostElement = "article";
 
 /**
- * Add the class to the muted element
+ * Functions
  */
+
+//Add the class to the muted element
 function addClassToElement() {
   // remove multiple spaces and join classes with a dot
   const mutedClasses =
@@ -25,14 +27,12 @@ function addClassToElement() {
   addOptionsToHeader();
 }
 
-/**
- * Add styles to the DOM
- */
+// Add styles to the DOM
 function addStyles() {
   const style = document.createElement("style");
   style.innerHTML = `
     .usermuted {
-      background-color: red;
+      background-color: #fdfbde;
     }
     body.mutedHidden .usermuted {
       display: none;
@@ -96,6 +96,10 @@ function addOptionsToHeader() {
     console.log("Header element not found");
   }
 }
+
+/**
+ * Observer
+ */
 
 // Create a new observer to watch for changes in the DOM
 const observer = new MutationObserver(addClassToElement);
